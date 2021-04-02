@@ -1,0 +1,10 @@
+package ex23;
+
+public class DoisMaioresInteiros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

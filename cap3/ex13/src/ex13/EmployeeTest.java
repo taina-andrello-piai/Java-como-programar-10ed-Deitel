@@ -1,0 +1,27 @@
+package ex13;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		
+		Employee employee1 = new Employee("Tainá","Andrello Piai",15000.00);
+		Employee employee2 = new Employee("Leonardo","Di Caprio",1000000.00);
+		
+		System.out.printf("Salário mensal de  %s %s: $ %.2f%nSalário mensal de %s %s: $ %.2f%n%n"
+				+ "Salário anual de %s %s: $ %.2f%nSalário anual de %s %s: $ %.2f"
+				+ "%n%nAumento salarial de 10%%"
+				+ "%n%nSalário anual de %s %s: $ %.2f%nSalário anual de %s %s: $ %.2f",
+				employee1.getNome(),employee1.getSobrenome(),
+				employee1.getSalario(),
+				employee2.getNome(),employee2.getSobrenome(),
+				employee2.getSalario(),
+				employee1.getNome(),employee1.getSobrenome(),
+				employee1.salarioAnual(),
+				employee2.getNome(),employee2.getSobrenome(),
+				employee2.salarioAnual(),
+				employee1.getNome(),employee1.getSobrenome(),
+				employee1.aumentoSalario(),
+				employee2.getNome(),employee2.getSobrenome(),
+				employee2.aumentoSalario());
+	}
+}

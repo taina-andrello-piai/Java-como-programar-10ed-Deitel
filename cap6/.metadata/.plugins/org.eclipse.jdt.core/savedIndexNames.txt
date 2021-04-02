@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\Tainá\Desktop\POO\Java_-_Como_Programar_10a_Ed_Deitel_and\cap6\.metadata\.plugins\org.eclipse.jdt.core
+2703182794.index
+2318538761.index
+560410029.index
+2170190651.index
+2983735356.index

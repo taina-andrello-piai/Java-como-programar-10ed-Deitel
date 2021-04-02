@@ -1,0 +1,28 @@
+package ex24;
+
+/*(Programa de impressão de losangos) Escreva um aplicativo que imprime a seguinte forma de um losango. 
+ * Você pode utilizar instruções de saída que imprimem um único asterisco (*), um único espaço ou um único 
+ * caractere de nova linha. Maximize sua utilização de repetição (com instruções for aninhadas) e minimize 
+ * o número de instruções de saída.
+*/
+
+public class ImpressaoDeLosangos {
+
+	public static void main(String[] args) {
+			
+		for(int j = 0; j < 5; j++) {
+			for(int k = 0; k < (4 - j); k++) // pre-espaços
+				System.out.print(' ');
+			for(int i = 0; i < (2*j + 1); i++) // asteriscos
+				System.out.print('*');
+			System.out.println();
+		}
+		for(int j = 4; j > 0; j--) {
+			for(int k = 0; k < (5 - j); k++)
+				System.out.print(' ');
+			for(int i = 1; i < (2*j +1); i++)
+				System.out.print('*');
+			System.out.println();
+		}
+	}
+}

@@ -1,0 +1,23 @@
+package ex14;
+
+/*(Programa de juros compostos modificado) 
+ * Modifique o aplicativo de juros compostos da Figura 5.6 para repetir os passos para taxas
+ *de juros de 5%, 6%, 7%, 8%, 9% e 10%. Utilize um loop for para variar a taxa de juros.
+*/
+
+public class JurosCompostosModificado {
+
+	public static void main(String[] args) {
+		
+		double total = 0;
+		double usuario = 1000000000.0;
+		double rate = 0.04;
+	
+		while(total < 1500000000.0) {		
+			int month = 1; 
+			total = usuario * Math.pow(1.0 + rate, month);
+			System.out.printf("%4d%,20.2f%n", month, total);
+			month++;
+		}
+	}
+}

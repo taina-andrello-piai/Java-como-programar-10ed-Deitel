@@ -1,0 +1,10 @@
+package ex25;
+
+public class ImpressaoDeLosangosModificado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

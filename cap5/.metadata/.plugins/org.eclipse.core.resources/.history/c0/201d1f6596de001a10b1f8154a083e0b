@@ -1,0 +1,78 @@
+package ex17;
+
+public class Produtos {
+
+	private int numeroProduto = -1,
+				quantidadeProduto = 0;
+	private int quantidade1 = 0, quantidade2 = 0, quantidade3 = 0, quantidade4 = 0, quantidade5 = 0;
+	
+	public Produtos(int numeroProduto, int quantidadeProduto) {
+		
+		this.numeroProduto = numeroProduto;
+		this.quantidadeProduto = quantidadeProduto;
+		
+		switch(numeroProduto) 
+		{
+			case 1:
+				quantidade1 += quantidadeProduto;
+				break;
+			case 2:
+				quantidade2 += quantidadeProduto;
+				break;
+			case 3:
+				quantidade3 += quantidadeProduto;
+				break;
+			case 4:
+				quantidade4 += quantidadeProduto;
+				break;
+			case 5:
+				quantidade5 += quantidadeProduto;
+				break;
+			default:
+				System.out.print("\nNenhum produto inserido.\n");
+				break;
+		}
+	}
+	
+	public double precoVarejo(int numeroProduto) {
+		double total = 0;
+		switch(numeroProduto) 
+		{
+			case 1:
+				total = quantidade1 * 2.98;
+				break;
+			case 2:
+				total = quantidade2 * 4.50;
+				break;
+			case 3:
+				total = quantidade3 * 9.98;
+				break;
+			case 4:
+				total = quantidade4 * 4.49;
+				break;
+			case 5:
+				total = quantidade5 * 6.87;
+				break;
+			default:
+				System.out.print("Número de produto inválido.");
+				break;
+		}
+		return total;
+	}
+	
+	public void setNumeroProduto(int numeroProduto) {
+		this.numeroProduto = numeroProduto;
+	}
+	
+	public int getNumeroProduto() {
+		return numeroProduto;
+	}
+	
+	public void setQuantidadeProduto(int quantidadeProduto) {
+		this.quantidadeProduto = quantidadeProduto;
+	}
+	
+	public int getQuantidadeProduto() {
+		return quantidadeProduto;
+	}
+}

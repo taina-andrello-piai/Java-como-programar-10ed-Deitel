@@ -1,0 +1,66 @@
+package ex30;
+
+/*(Classe AutoPolicy modificada) Modifique a classe AutoPolicy na Figura 5.11 para validar os códigos 
+ * de estado de duas letras para os estados do nordeste dos EUA. Os códigos são: CT para Connecticut, 
+ * MA para Massachusetts, ME para Maine, NH para New Hampshire, NJ para New Jersey, NY para Nova York, 
+ * PA para Pensilvânia e VT para Vermont. No método AutoPolicy setState use o operador lógico OU (||) 
+ * (Seção 5.9) para criar uma condição composta em uma instrução if...else que compara o argumento do método
+ * com cada código de duas letras. Se o código estiver incorreto, a parte else da instrução if...else 
+ * deve exibir uma mensagem de erro. Nos próximos capítulos, você aprenderá a usar o tratamento de exceções
+ * para indicar que um método recebeu um valor inválido.
+ */
+
+public class ClasseAutoPolicyModificda {
+
+	private int accountNumber; // policy account number
+	private String makeAndModel; // car that the policy applies to
+	private String state; // two-letter state abbreviation
+
+	public ClasseAutoPolicyModificda(int accountNumber, String makeAndModel, String state) {
+		this.accountNumber = accountNumber;
+	    this.makeAndModel = makeAndModel;
+	    this.state = state;
+	}
+	
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
+	} 
+	
+	public void setMakeAndModel(String makeAndModel) {
+		this.makeAndModel = makeAndModel;
+	}
+	
+	public String getMakeAndModel() {
+		return makeAndModel;
+	} 
+	   
+	public void setState(String state) {
+		this.state = state;
+		if (((((((state == "MA" || state == "NJ") || state == "NY") || state == "PA") 
+			  || state == "CT") || state == "ME") || state == "NH") || state == "VT"){
+		}else
+			System.out.println(state +" é um Estado inválido");
+	}
+
+	public String getState() {
+		return state;
+	}
+	
+	public boolean isNoFaultState() {
+		boolean noFaultState; 
+		switch (getState()) 
+	    {
+	    	case "MA": case "NJ": case "NY": case "PA": case "CT": case "ME": case "NH": case "VT":
+	    		noFaultState = true;
+	            break;
+	         default:
+	            noFaultState = false;
+	            break;
+	    }
+		return noFaultState;
+	} 
+}

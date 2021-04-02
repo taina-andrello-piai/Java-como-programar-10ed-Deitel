@@ -1,0 +1,39 @@
+package ex20;
+
+/*(Calculando o valor de pi) Calcule o valor de pi a partir de uma série infinita
+ 
+	pi = 4 - (4/3) + (4/5) - (4/7) + (4/9) - (4/11) + ... 
+
+Imprima uma tabela que mostre o valor aproximado de pi calculando os 200.000 primeiros termos dessa série. 
+Quantos termos você tem de utilizar antes de primeiro obter um valor que começa com 3,14159?
+*/
+ 
+public class PiSerieInfinita {
+
+	public static void main(String[] args) {
+		
+		double pi = 0;
+		double j = 1;
+		
+		for(int i = 1; i <= 200000; i++) {
+			double termo = (4 / j) ;
+			if ((i % 2) == 0) { 
+				System.out.printf("%n%7d\t\t%.10f - %.10f = ", i, pi, termo);
+				pi -= termo;
+				if (pi <= 3.14159)
+					System.out.printf("%.10f%n",pi);
+				else
+					System.err.printf("%.10f%n",pi);
+			}
+			else {
+				System.out.printf("%n%7d\t\t%.10f + %.10f = ", i, pi, termo);
+				pi += termo;
+				if (pi <= 3.14159)
+					System.out.printf("%.10f%n",pi);
+				else
+					System.err.printf("%.10f%n",pi);
+			}
+			j += 2;
+		}
+	}
+}

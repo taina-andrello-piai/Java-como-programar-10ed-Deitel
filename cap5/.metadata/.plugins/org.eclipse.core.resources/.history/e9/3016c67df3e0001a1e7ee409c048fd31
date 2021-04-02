@@ -1,0 +1,117 @@
+package ex31;
+
+public class AquecimentoGlobal {
+	
+	private int alternativaEscolhida,
+				numeroQuestao,
+				pontuacaoFinal;
+	
+	public void confereAlternativa(int numeroQuestao, int alternativaEscolhida) {
+		
+		this.numeroQuestao = numeroQuestao;
+		this.alternativaEscolhida = alternativaEscolhida;
+		
+		switch(numeroQuestao) {
+		case 1:
+			if(alternativaEscolhida == 2)
+				pontuacaoFinal++;
+			break;
+		case 2:
+			if(alternativaEscolhida == 3)
+				pontuacaoFinal++;
+			break;
+		case 3:
+			if(alternativaEscolhida == 1)
+				pontuacaoFinal++;
+			break;
+		case 4:
+			if(alternativaEscolhida == 1)
+				pontuacaoFinal++;
+			break;
+		case 5:
+			if(alternativaEscolhida == 4)
+				pontuacaoFinal++;
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public void resultadoFinal() {
+		switch(pontuacaoFinal) {
+			case 0: case 1: case 2: case 3:
+				System.err.println("\nSua pontuação foi " + pontuacaoFinal 
+						+ ". \nÉ o momento de aprimorar seu conhecimento sobre o aquecimento global.");
+				break;
+			case 4:
+				System.out.println("\nSua pontuação final foi " + pontuacaoFinal + ". Muito bom.");
+				break;
+			case 5:
+				System.out.println("\nSua pontuação final foi " + pontuacaoFinal + ". Excelente!");
+				break;
+			default:
+				break;
+		}
+	}
+	
+	public void questoes(int numeroQuestao) {
+		this.numeroQuestao = numeroQuestao;
+		switch(numeroQuestao) {
+			case 1:
+				System.out.println("\n(QUESTÃO 1) Uma das principais causas do aquecimento global"
+						+ " é a queima de combustíveis fósseis. São exemplos de combustíveis fósseis, "
+						+ "exceto: \n(1) Gás natural\n(2) Hidrogênio\n(3) Petróleo\n(4) Carvão");
+				break;
+			case 2:
+				System.out.println("\n(QUESTÃO 2) Nas alternativas abaixo, a única que não representa"
+						+ " um impacto causado pelo aquecimento global é: \n(1) Secas severas prolongadas"
+						+ "\n(2) Tempestades com força recorde\n(3) Diversidade da fauna e flora nos"
+						+ " diversos ecossistemas\n(4) Aumento da temperatura média do Planeta e populações"
+						+ " enfrentando ondas de calor");
+				break;
+			case 3:
+				System.out.println("\n(QUESTÃO 3) O setor agropecuário responde por cerca de 70% das "
+						+ "emissões brasileiras de gases do efeito estufa. As causas dessa emissão "
+						+ "são, exceto: \n(1) A restauração das florestas degradadas"
+						+ "\n(2) O ‘pum’ dos rebanhos\n(3) O uso de fertilizantes"
+						+ "\n(4) O desmatamento de novas áreas");
+				break;
+			case 4:
+				System.out.println("\n(QUESTÃO 4) São causas básicas do aquecimento global, exceto: "
+						+ "\n(1) Uso de energia sustentável e renovável\n(2) Lixo e poluiçao"
+						+ "\n(3) Urbanização e desmatamento\n(4) Explosão populacional e consumismo");
+				break;
+			case 5:
+				System.out.println("\n(QUESTÃO 5) O aquecimento verificado não é globalmente uniforme."
+						+ " Qual a região que está sendo apontada como a mais afestada?"
+						+ "\n(1) Alpes Andinos\n(2) Deserto do Saara\n(3) Amazônia\n(4) Polo Ártico");
+				break;
+			default:
+				break;
+			}
+	}
+
+	public int getAlternativaEscolhida() {
+		return alternativaEscolhida;
+	}
+
+	public void setAlternativaEscolhida(int alternativaEscolhida) {
+		this.alternativaEscolhida = alternativaEscolhida;
+	}
+
+	public int getNumeroQuestao() {
+		return numeroQuestao;
+	}
+
+	public void setNumeroQuestao(int numeroQuestao) {
+		this.numeroQuestao = numeroQuestao;
+	}
+
+	public int getPontuacaoFinal() {
+		return pontuacaoFinal;
+	}
+
+	public void setPontuacaoFinal(int pontuacaoFinal) {
+		this.pontuacaoFinal = pontuacaoFinal;
+	}
+}

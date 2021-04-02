@@ -1,0 +1,36 @@
+package ex32;
+
+import java.util.Scanner;
+
+public class FairTaxTest {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Cálculo de Fair Tax\n\n**Obs: Fair Tax corresponde a 23% do valor bruto pago"
+				+ " e 30% do valor líquido.**");
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("\nInsira as despesas anual para cada categoria abaixo\n\nMoradia: $");
+		double moradia = input.nextDouble();
+		System.out.print("Alimentação: $");
+		double alimentacao = input.nextDouble();
+		System.out.print("Vestuário: $");
+		double vestuario = input.nextDouble();
+		System.out.print("Transporte: $");
+		double transporte = input.nextDouble();
+		System.out.print("Educação: $");
+		double educacao = input.nextDouble();
+		System.out.print("Assistência Médica: $");
+		double assistenciaMedica = input.nextDouble();
+		System.out.print("Férias: $");
+		double ferias = input.nextDouble();
+		
+		FairTax fairTax = new FairTax(moradia, alimentacao, vestuario, transporte, educacao,
+				assistenciaMedica, ferias);
+		
+		System.out.printf("Fair Tax calculado: $%.2f", fairTax.getCalculaFairTax());
+		
+		input.close();
+		return;
+	}
+}

@@ -1,0 +1,26 @@
+package ex31;
+
+import java.util.Scanner;
+
+public class AquecimentoGlobalTest {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		AquecimentoGlobal teste = new AquecimentoGlobal();
+		
+		for(int questao = 1; questao <= 5; questao++) {
+			teste.questoes(questao);
+			System.out.print("Resposta: ");
+			int resposta = input.nextInt();
+			while(!(resposta >= 1 && resposta <= 4)) {
+				System.out.print("Alternativa inexistente. Tente novamente.\nResposta: ");
+				resposta = input.nextInt();
+			}
+			teste.setAlternativaEscolhida(resposta);
+			teste.confereAlternativa(questao, resposta);
+		}
+		
+		teste.resultadoFinal();
+	}
+}

@@ -1,0 +1,49 @@
+package ex23;
+
+/*(Leis de De Morgan) Neste capítulo, discutimos os operadores lógicos &&, &, ||, |, ^ e !. 
+ * As leis de De Morgan às vezes podem tornar mais convenientes para expressar uma expressão lógica. 
+ * Essas leis afirmam que a expressão !(condição1 && condição2) é logicamente equivalente à expressão
+ * (!condição1 || !condição2). Além disso, a expressão !(condição1|| condição2) é logicamente equivalente à 
+ * expressão (!condição1&& !condição2). Utilize as leis de De Morgan para escrever expressões equivalentes 
+ * para cada uma das expressões a seguir, então escreva um aplicativo para mostrar que tanto a expressão 
+ * original como a nova expressão em cada caso produzem o mesmo valor: 
+ * a) !(x < 5) && !(y >= 7) 
+ * b) !(a == b) || !(g != 5) 
+ * c) !((x <= 8) && (y > 4))
+ *  d) !((i > 4) || (j <= 6))
+*/
+
+public class LeisDeMorgan {
+
+	public static void main(String[] args) {
+		
+		int x = 2,
+			y = 6,
+			g = 4,
+			a = 5,
+			b = 9,
+			i = 15,
+			j = 3;
+		
+		System.out.println(!(x < 5) && !(y >= 7)); //a
+		System.out.println((x >= 5) && (y < 7));
+		System.out.println(!((x < 5) || (y >= 7)));
+		System.out.println();
+		
+		System.out.println(!(a == b) || !(g != 5)); //b
+		System.out.println((a != b) || (g == 5));
+		System.out.println(!((a == b) && (g != 5)));
+		System.out.println();
+		
+		System.out.println(!((x <= 8) && (y > 4))); //c
+		System.out.println(!(x <= 8) || !(y > 4));
+		System.out.println(!(!(x > 8) && !(y <= 4)));
+		System.out.println();
+		
+		System.out.println(!((i > 4) || (j <= 6))); //d
+		System.out.println(!(i > 4) && !(j <= 6));
+		System.out.println((i <= 4) && (j > 6));
+		System.out.println();
+		
+	}
+}

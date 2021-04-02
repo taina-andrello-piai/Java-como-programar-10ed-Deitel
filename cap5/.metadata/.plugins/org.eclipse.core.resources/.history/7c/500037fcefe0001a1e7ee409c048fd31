@@ -1,0 +1,105 @@
+package ex31;
+
+public class AquecimentoGlobal {
+	
+	private int alternativaEscolhida,
+				numeroQuestao,
+				pontuacaoFinal;
+	
+	public void confereAlternativa(int numeroQuestao, int alternativaEscolhida) {
+		
+		this.numeroQuestao = numeroQuestao;
+		this.alternativaEscolhida = alternativaEscolhida;
+		
+		switch(numeroQuestao) {
+		case 1:
+			if(alternativaEscolhida == 2)
+				pontuacaoFinal++;
+			break;
+		case 2:
+			if(alternativaEscolhida == 3)
+				pontuacaoFinal++;
+			break;
+		case 3:
+			if(alternativaEscolhida == 1)
+				pontuacaoFinal++;
+			break;
+		case 4:
+			if(alternativaEscolhida == 1)
+				pontuacaoFinal++;
+			break;
+		case 5:
+			if(alternativaEscolhida == 4)
+				pontuacaoFinal++;
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public void resultadoFinal() {
+		switch(pontuacaoFinal) {
+			case 0: case 1: case 2: case 3:
+				System.err.println("\nSua pontuação foi " + pontuacaoFinal 
+						+ ". \nÉ o momento de aprimorar seu conhecimento sobre o aquecimento global.");
+				break;
+			case 4:
+				System.out.println("\nSua pontuação final foi " + pontuacaoFinal + ". Muito bom.");
+				break;
+			case 5:
+				System.out.println("\nSua pontuação final foi " + pontuacaoFinal + ". Excelente!");
+				break;
+			default:
+				break;
+		}
+	}
+	
+	public void questoes(int numeroQuestao) {
+		this.numeroQuestao = numeroQuestao;
+		switch(numeroQuestao) {
+			case 1:
+				System.out.println("\n(QUESTÃO 1)\t Uma das principais causas do aquecimento global"
+						+ " é a queima de combustíveis fósseis. São exemplos de combustíveis fósseis, "
+						+ "exceto: \n(1)\tGás natural\n(2)\tHidrogênio\n(3)\tPetróleo\n(4)\tCarvão");
+				break;
+			case 2:
+				System.out.println("\n(QUESTÃO 2)\t");
+				break;
+			case 3:
+				System.out.println("\n(QUESTÃO 3)\t");
+				break;
+			case 4:
+				System.out.println("\n(QUESTÃO 4)\t");
+				break;
+			case 5:
+				System.out.println("\n(QUESTÃO 5)\t");
+				break;
+			default:
+				break;
+			}
+	}
+
+	public int getAlternativaEscolhida() {
+		return alternativaEscolhida;
+	}
+
+	public void setAlternativaEscolhida(int alternativaEscolhida) {
+		this.alternativaEscolhida = alternativaEscolhida;
+	}
+
+	public int getNumeroQuestao() {
+		return numeroQuestao;
+	}
+
+	public void setNumeroQuestao(int numeroQuestao) {
+		this.numeroQuestao = numeroQuestao;
+	}
+
+	public int getPontuacaoFinal() {
+		return pontuacaoFinal;
+	}
+
+	public void setPontuacaoFinal(int pontuacaoFinal) {
+		this.pontuacaoFinal = pontuacaoFinal;
+	}
+}

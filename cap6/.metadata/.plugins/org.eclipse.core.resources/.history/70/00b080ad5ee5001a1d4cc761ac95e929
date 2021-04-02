@@ -1,0 +1,12 @@
+package ex7;
+
+public class TesttMathInstructions {
+
+	public static void main(String[] args) {
+		
+		double x = Math.ceil(-Math.abs(-8 + Math.floor(-5.5)));
+		double y = Math.ceil(0.0);
+		System.out.print(x + "\n" + y);
+	}
+
+}

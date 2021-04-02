@@ -1,0 +1,25 @@
+package ex31;
+
+import java.util.Scanner;
+
+public class DecimalBinario {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Insira um número binário: ");
+		int binario = input.nextInt();
+		boolean bin = true;
+		
+		while(input.hasNext()) {
+			if(binario % 2 == 0)
+				bin = false;
+			else
+				bin = true;
+			System.out.println("done");
+		}
+		input.close();
+		return;
+	}
+}
